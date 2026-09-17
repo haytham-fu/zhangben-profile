@@ -2,13 +2,13 @@
 
 Personal **plan / config pack** for [haytham-fu/zhangben](https://github.com/haytham-fu/zhangben) — **not** shipped with the public GitHub Pages site.
 
-The live app at https://haytham-fu.github.io/zhangben/ is a **generic ledger**. This repo holds Haytham’s private-ish budget plan (3500+1500, daily plan, Sept 2026 opening summary) so it can be loaded on demand.
+The live app at https://haytham-fu.github.io/zhangben/ is a **generic ledger**. This repo holds Haytham’s private-ish budget plan (3500+1500, daily plan, Sept 2026 opening summary + daily txs) so it can be loaded on demand.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `haytham-ledger-profile.json` | Settings overlay (`version` + `settings`) |
+| `haytham-ledger-profile.json` | Settings overlay + optional `transactions` (`version` + `settings` + `transactions`) |
 
 ## How to load in the app
 
@@ -18,7 +18,7 @@ The live app at https://haytham-fu.github.io/zhangben/ is a **generic ledger**. 
    - **从链接导入** — paste the raw URL below
    - **粘贴 JSON** — paste file contents
 
-Import **merges settings + `monthOpening` only**. Existing transactions are kept; new spends continue to reduce remaining.
+Import **merges settings + `monthOpening`**, and **merges `transactions` by id** (skips duplicates). Existing local txs are kept.
 
 ### Raw URL (after push to `main`)
 
@@ -33,7 +33,9 @@ Repo: https://github.com/haytham-fu/zhangben-profile
 - Monthly budget **5000** = **3500** basic + **1500** special  
 - Daily plan compare amounts (Mon–Sun / Sat play|stay)  
 - Fixed HKD **0.86** and preferred currencies RMB/HKD/USD/EUR  
-- `monthOpening` for **2026-09** first-half summary (no daily line items)
+- `monthOpening` for **2026-09** first-half summary (**9/1–9/15**, no daily line items)  
+- `transactions` for **9/16–9/17** daily detail (calendar / day remain / monthly remain)  
+- Octopus **topup** entries use `kind: "topup"` and **do not** count as budget spend
 
 ## Privacy
 
