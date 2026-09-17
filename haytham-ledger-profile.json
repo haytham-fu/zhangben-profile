@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "haytham-plan",
+  "name": "haytham-ledger-profile",
+  "label": "Haytham 个人预算计划",
+  "description": "3500 基础 + 1500 专项；日计划对照；2026-09 上半月期初汇总。导入后叠加新流水，不覆盖已有记账。",
+  "settings": {
+    "basicBudget": 3500,
+    "specialBudget": 1500,
+    "dailyPlanCompareEnabled": true,
+    "includeSpecialInAdvice": true,
+    "showMonthlyBudgetProgress": true,
+    "defaultSatMode": "play",
+    "fxRateMode": "fixed",
+    "fixedRates": {
+      "HKD": 0.86,
+      "USD": 7.2,
+      "EUR": 7.8,
+      "JPY": 0.048,
+      "GBP": 9.2,
+      "TWD": 0.23,
+      "MOP": 0.84,
+      "SGD": 5.4
+    },
+    "preferredCurrencies": ["RMB", "HKD", "USD", "EUR"],
+    "dailyPlan": {
+      "mon": 131,
+      "tue": 96,
+      "wed": 131,
+      "thu": 76,
+      "fri": 76,
+      "satPlay": 280,
+      "satStay": 11.4,
+      "sun": 56.4
+    },
+    "monthOpening": {
+      "ym": "2026-09",
+      "basicUsed": 1644.08,
+      "specialUsed": 531,
+      "expenseRmb": 2422.86,
+      "incomeRmb": 247.78,
+      "label": "9/1–9/15 汇总"
+    }
+  }
+}
